@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=MyVim
+Exec=alacritty -e vim %F
+Terminal=false
+Icon=gvim
+Categories=Utility;TextEditor
