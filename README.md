@@ -60,9 +60,12 @@ Aborting
 ```
 
 Esto se debe a que es posible que tu carpeta $HOME ya tenga algunos archivos de configuración de stock que Git sobrescribiría. La solución es sencilla: haz una copia de seguridad de los archivos si te importan y elimínalos si te dan igual. Te doy un atajo para mover todos los archivos incorrectos automáticamente a una carpeta de respaldo:
+
+```
 mkdir -p .config-backup && \
 config checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | \
 xargs -I{} mv {} .config-backup/{}
+```
 
 ### Vuelve a ejecutar la extracción si has tenido problemas:
 
