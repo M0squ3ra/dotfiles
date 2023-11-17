@@ -62,7 +62,8 @@ exec_always --no-startup-id nitrogen --restore
 bindsym $mod+d exec rofi -theme spotlight-dark -show-icons -show drun -run-shell-command '{terminal} -e zsh -ic "{cmd} && read"'
 bindsym $mod+p exec rofi -show power-menu -modi power-menu:~/.local/bin/rofi-power-menu -theme spotlight-dark -show-icons
 #Needs  systemctl --user enable greenclip.service
-bindsym $mod+c exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}' -theme spotlight-dark
+bindsym $mod+c exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}' -theme spotlight-dark -show-icons
+bindsym $mod+b exec rofi -show file-browser-extended -theme spotlight-dark -show-icons
 
 exec --no-startup-id picom --config ~/.config/picom/picom.conf -b --backend glx &
 

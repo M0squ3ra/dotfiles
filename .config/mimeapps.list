@@ -1,0 +1,22 @@
+[Default Applications]
+application/pdf=okularApplication_pdf.desktop
+application/json=brave.desktop
+text/html=brave.desktop
+x-scheme-handler/ftp=brave.desktop
+x-scheme-handler/http=brave.desktop
+x-scheme-handler/https=brave.desktop
+inode/directory=nemo.desktop
+application/x-gnome-saved-search=nemo.desktop
+alacritty=nemo.desktop
+image/png=mirage.desktop
+image/jpg=mirage.desktop
+image/svg=mirage.desktop
+image/xpm=mirage.desktop
+image/gif=mirage.desktop
+image/bmp=mirage.desktop
+image/tiff=mirage.desktop
+
+[Added Associations]
+application/pdf=okularApplication_pdf.desktop;
+application/json=brave.desktop
+video/x-matroska=userapp-vlc-S46R21.desktop;

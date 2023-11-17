@@ -147,6 +147,7 @@ configuration {
   }
   filebrowser {
       directories-first: true;
+      directory: "/home/m0squ3ra";
       sorting-method:    "name";
   }
 }
