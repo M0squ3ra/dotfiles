@@ -14,9 +14,20 @@ set hlsearch
 set updatetime=100
 set signcolumn=auto
 set noswapfile
+let g:rainbow_active = 1
+" Make the changes take effect: :source ~/.vimrc
 
-"Make the changes take effect: :source ~/.vimrc
+" VIM Cheatsheet
+" v: enters visual mode and selects text
+" V: selects entire line
+" y: copy selected text
+" c: change text (deletes and set cursor)
 
+" Keyboard mapping
+nnoremap ff :NERDTree ./<CR>
+nnoremap ff :NERDTreeToggle<CR>
+" m: muestra opciones
+"
 " FOLDING
 " zo: open a single fold under the cursor
 " zc: close the fold under the cursor
@@ -31,6 +42,7 @@ call plug#begin('~/.vim/plugged')
 					" change tab: ctrl + ww
 	Plug 'tpope/vim-fugitive'	" :G <git command>
 	Plug 'airblade/vim-gitgutter'	" git diff, etc
+	Plug 'frazrepo/vim-rainbow'	" colorize brackets
 call plug#end()
 " After adding de plugins: :PlugInstall
 " }}}

@@ -64,11 +64,12 @@ bindsym $mod+Shift+o exec i3lock --nofork -B 5 -k --time-color=D1D1D1 --date-col
 exec_always --no-startup-id nitrogen --restore
 
 #Rofi
-bindsym $mod+d exec rofi -theme spotlight-dark -show-icons -show drun -run-shell-command '{terminal} -e zsh -ic "{cmd} && read"'
-bindsym $mod+p exec rofi -show power-menu -modi power-menu:~/.local/bin/rofi-power-menu -theme spotlight-dark -show-icons
+set $rofi_theme spotlight-dark
+bindsym $mod+d exec rofi -theme $rofi_theme -show-icons -show drun -run-shell-command '{terminal} -e zsh -ic "{cmd} && read"'
+bindsym $mod+p exec rofi -show power-menu -modi power-menu:~/.local/bin/rofi-power-menu -theme $rofi_theme -show-icons
 #Needs  systemctl --user enable greenclip.service
-bindsym $mod+c exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}' -theme spotlight-dark -show-icons
-bindsym $mod+b exec rofi -show file-browser-extended -theme spotlight-dark -show-icons
+bindsym $mod+c exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}' -theme $rofi_theme -show-icons
+bindsym $mod+b exec rofi -show file-browser-extended -theme $rofi_theme -show-icons
 
 exec --no-startup-id picom --config ~/.config/picom/picom.conf -b --backend glx &
 
@@ -79,7 +80,6 @@ default_floating_border pixel 1
 #Polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh &
 
-exec --no-startup-id mkdir /tmp/greenclip
 bindsym --release Print exec scrot -s -f -o "/tmp/greenclip/%s.png" -e 'xclip -selection clipboard -t image/png -i $f'
 #Autotiling
 exec_always --no-startup-id autotiling
