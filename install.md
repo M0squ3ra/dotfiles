@@ -11,6 +11,7 @@
 - autotiling
 - bashtop
 - dracula-gtk-theme
+- i3-gaps-rounded-git
 - mirage
 - font-manager-git
 - rofi-file-browser-extended-git
