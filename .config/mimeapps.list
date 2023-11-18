@@ -17,6 +17,7 @@ image/gif=mirage.desktop
 image/bmp=mirage.desktop
 image/tiff=mirage.desktop
 text/plain=vim.desktop
+application/javascript=vim.desktop
 
 [Added Associations]
 application/pdf=okularApplication_pdf.desktop;
