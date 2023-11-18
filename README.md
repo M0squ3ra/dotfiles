@@ -28,7 +28,7 @@ alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 ### Comprueba también que tu repositorio de origen ignora la carpeta en la que lo clonarás, para que no crees problemas de recursividad:
 
 ```
-echo ".cfg" >> .gitignore
+echo ".dotfiles" >> .gitignore
 ```
 
 ### Ahora clona tus archivos ocultos en un repositorio bare en una carpeta "dot" de tu $HOME:
