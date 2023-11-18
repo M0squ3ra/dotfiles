@@ -79,6 +79,7 @@ default_floating_border pixel 1
 #Polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh &
 
+exec --no-startup-id mkdir /tmp/greenclip
 bindsym --release Print exec scrot -s -f -o "/tmp/greenclip/%s.png" -e 'xclip -selection clipboard -t image/png -i $f'
 #Autotiling
 exec_always --no-startup-id autotiling

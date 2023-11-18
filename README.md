@@ -22,7 +22,7 @@ config commit -m "Add vimrc"
 ### Antes de la instalación, comprueba que has confirmado el alias en tu .bashrc o .zsh:
 
 ```
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 ```
 
 ### Comprueba también que tu repositorio de origen ignora la carpeta en la que lo clonarás, para que no crees problemas de recursividad:
@@ -34,13 +34,13 @@ echo ".cfg" >> .gitignore
 ### Ahora clona tus archivos ocultos en un repositorio bare en una carpeta "dot" de tu $HOME:
 
 ```
-git clone --bare <git-repo-url> $HOME/.cfg
+git clone --bare <git-repo-url> $HOME/.dotfiles
 ```
 
 ### Define el alias en el alcance del shell actual:
 
 ```
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 ```
 
 ### Extrae el contenido real del repositorio base en tu $HOME:
