@@ -151,3 +151,4 @@ configuration {
       sorting-method:    "name";
   }
 }
+@theme "/home/m0squ3ra/.local/share/rofi/themes/spotlight-dark.rasi"

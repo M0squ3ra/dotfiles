@@ -73,7 +73,7 @@ bindsym $mod+p exec rofi -show power-menu -modi power-menu:~/.local/bin/rofi-pow
 bindsym $mod+c exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}' -theme $rofi_theme -show-icons
 bindsym $mod+b exec rofi -show file-browser-extended -theme $rofi_theme -show-icons
 
-exec --no-startup-id picom --config ~/.config/picom/picom.conf -b --backend glx &
+exec_always --no-startup-id picom --config ~/.config/picom/picom.conf -b --backend glx &
 
 #Hide window title bar
 default_border pixel 1
