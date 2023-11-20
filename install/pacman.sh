@@ -12,6 +12,7 @@ bashtop \
 blueman bluedevil bluez-utils bluez \
 breeze-icons \
 docker docker-compose \
+dunst \
 fuse ntfs-3g \
 gamemode \
 go \

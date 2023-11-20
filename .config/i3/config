@@ -82,10 +82,14 @@ default_floating_border pixel 1
 #Polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh &
 
-exec_always --no-startup-id mkdir -p /tmp/greenclip
+exec --no-startup-id mkdir -p /tmp/greenclip
 bindsym --release Print exec scrot -s -f -o "/tmp/greenclip/%s.png" -e 'xclip -selection clipboard -t image/png -i $f'
+
 #Autotiling
-exec_always --no-startup-id autotiling
+exec_always --no-startup-id autotiling &
+
+#Notifications
+exec_always --no-startup-id ~/.config/dunst/launch.sh &
 
 # class                 border  backgr. text    indicator child_border
 client.focused          #3477eb #285577 #ffffff #2e9ef4   #285577
