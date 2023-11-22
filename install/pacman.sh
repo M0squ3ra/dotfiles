@@ -16,6 +16,7 @@ dunst \
 fuse ntfs-3g \
 gamemode \
 go \
+kcharselect \
 kdenlive \
 libreoffice-fresh \
 lutris \
