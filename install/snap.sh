@@ -7,6 +7,7 @@
 packages=(
 	"calibre"
 	"discord"
+	"postman"
 	"shortwave"
 	"uno-calculator"
 )

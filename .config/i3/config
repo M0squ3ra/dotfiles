@@ -79,6 +79,9 @@ exec_always --no-startup-id ~/.config/picom/launch.sh &
 default_border pixel 1
 default_floating_border pixel 1
 
+# Clip manager
+exec_always --no-startup-id ~/.config/greenclip/launch.sh &
+
 #Polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh &
 

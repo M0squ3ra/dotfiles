@@ -26,7 +26,6 @@ nemo \
 nitrogen \
 openssh \
 okular \
-postman \
 polybar \
 pipewire \
 pipewire-pulse \
@@ -36,7 +35,6 @@ picom \
 python-pip \
 rofi \
 steam \
-ssh-keygen \
 scrot \
 sddm \
 transmission-gtk \
@@ -47,6 +45,6 @@ vlc \
 virt-manager qemu-desktop libvirt edk2-ovmf dnsmasq iptables-nft \
 wine \
 xclip \
-xprop \
+xorg-xprop \
 zsh 
 
