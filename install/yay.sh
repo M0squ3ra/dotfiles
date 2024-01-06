@@ -5,6 +5,7 @@
 
 packages=(
 	"autotiling"
+	"brave-bin"
 	"dracula-gtk-theme"
 	"i3-gaps-rounded-git"
 	"mirage"
