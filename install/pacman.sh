@@ -14,7 +14,7 @@ breeze-icons \
 docker docker-compose \
 dunst \
 fuse ntfs-3g \
-gamemode \
+gamemode lib32-gamemode \
 go \
 kcharselect \
 kdenlive \

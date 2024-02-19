@@ -38,7 +38,8 @@ exec --no-startup-id nm-applet
 
 #######Custom##############################
 #Keyboard Layout
-exec_always --no-startup-id setxkbmap latam
+#exec_always --no-startup-id setxkbmap latam
+exec_always --no-startup-id setxkbmap us
 
 bindsym $mod+Return exec alacritty
 
