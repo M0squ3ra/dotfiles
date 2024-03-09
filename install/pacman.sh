@@ -25,6 +25,7 @@ nvidia-settings nvidia-utils nvidia-lts nvidia lib32-virtualgl lib32-nvidia-util
 nemo \
 nitrogen \
 openssh \
+openrgb \
 okular \
 polybar \
 pipewire \
@@ -46,5 +47,6 @@ virt-manager qemu-desktop libvirt edk2-ovmf dnsmasq iptables-nft \
 wine \
 xclip \
 xorg-xprop \
+xorg-server xorg-apps xorg-xinit i3-wd \
 zsh 
 
