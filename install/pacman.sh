@@ -23,6 +23,7 @@ lutris \
 mixxx \
 nvidia-settings nvidia-utils nvidia-lts nvidia lib32-virtualgl lib32-nvidia-utils vulkan-icd-loader lib32-vulkan-icd-loader \
 nemo \
+neofetch \
 nitrogen \
 openssh \
 openrgb \
