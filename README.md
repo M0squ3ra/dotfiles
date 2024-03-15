@@ -79,4 +79,10 @@ config checkout
 config config --local status.showUntrackedFiles no
 ```
 
+### Descargar submodulos
+
+```
+config submodule update --init
+```
+
 Todo listo, a partir de ahora puedes escribir comandos config para añadir y actualizar tus archivos ocultos:
