@@ -43,6 +43,10 @@ call plug#begin('~/.vim/plugged')
 	Plug 'tpope/vim-fugitive'	" :G <git command>
 	Plug 'airblade/vim-gitgutter'	" git diff, etc
 	Plug 'frazrepo/vim-rainbow'	" colorize brackets
+
+	Plug 'prabirshrestha/vim-lsp'
+	Plug 'mattn/vim-lsp-settings'
+
 call plug#end()
 " After adding de plugins: :PlugInstall
 " }}}
@@ -62,6 +66,22 @@ call plug#end()
 augroup filetype_vim
     autocmd!
     autocmd FileType vim setlocal foldmethod=marker
+augroup END
+
+function! s:on_lsp_buffer_enabled() abort
+    setlocal omnifunc=lsp#complete
+    setlocal signcolumn=yes
+    nmap <buffer> gi <plug>(lsp-definition)
+    nmap <buffer> gd <plug>(lsp-declaration)
+    nmap <buffer> gr <plug>(lsp-references)
+    nmap <buffer> gl <plug>(lsp-document-diagnostics)
+    nmap <buffer> <f2> <plug>(lsp-rename)
+    nmap <buffer> <f3> <plug>(lsp-hover)
+endfunction
+
+augroup lsp_install
+    au!
+    autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
 augroup END
 
 " More Vimscripts code goes here.
