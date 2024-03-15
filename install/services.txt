@@ -1,0 +1,10 @@
+systemctl enable <service>
+- bluetooth.service
+- NetworkManager-dispatcher.service
+- systemd-resolved.service
+
+systemctl --user enable <servicev>
+- greenclip.service
+- pipewire-media-session.service (o wireplumber)
+- xdg-user-dirs-update.service
+
