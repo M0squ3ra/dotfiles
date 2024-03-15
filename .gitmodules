@@ -16,3 +16,6 @@
 [submodule "oh-my-zsh-custom/plugins/zsh-syntax-highlighting"]
 	path = oh-my-zsh-custom/plugins/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
+[submodule "fonts-downloaded/powerline-extra-symbols"]
+	path = fonts-downloaded/powerline-extra-symbols
+	url = git@github.com:ryanoasis/powerline-extra-symbols.git
