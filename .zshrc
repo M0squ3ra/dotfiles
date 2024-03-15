@@ -22,7 +22,7 @@ export CM_HISTLENGTH=15
 export CM_OUTPUT_CLIP=0
 export PATH="$HOME/.local/bin:$PATH"
 
-ZSH_THEME="spaceship"
+#ZSH_THEME="spaceship"
 
 #powerline-daemon -q
 #. /usr/share/powerline/bindings/zsh/powerline.zsh
