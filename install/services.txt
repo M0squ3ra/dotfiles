@@ -2,6 +2,8 @@ systemctl enable <service>
 - bluetooth.service
 - NetworkManager-dispatcher.service
 - systemd-resolved.service
+- iwd.service
+- dhcpcd.service
 
 systemctl --user enable <servicev>
 - greenclip.service
