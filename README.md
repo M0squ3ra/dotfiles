@@ -85,4 +85,9 @@ config config --local status.showUntrackedFiles no
 config submodule update --init
 ```
 
+### Crear symlink a oh-my-zsh custom
+```
+rm -r $HOME/.oh-my-zsh/custom && ln -s $HOME/oh-my-zsh-custom custom
+```
+
 Todo listo, a partir de ahora puedes escribir comandos config para añadir y actualizar tus archivos ocultos:
