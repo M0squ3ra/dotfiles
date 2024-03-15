@@ -58,7 +58,7 @@ export LANG=es_AR.UTF-8
 #   export EDITOR='mvim'
 # fi
 
-source "/home/m0squ3ra/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
+source "/home/m0squ3ra/oh-my-zsh-custom/themes/spaceship-prompt/spaceship.zsh-theme"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
