@@ -8,6 +8,7 @@ packages=(
 	"brave-bin"
 	"dracula-gtk-theme"
 	"i3-gaps-rounded-git"
+	"i3lock-color"
 	"mirage"
 	"font-manager-git"
 	"rofi-file-browser-extended-git"
