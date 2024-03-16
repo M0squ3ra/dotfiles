@@ -47,6 +47,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'prabirshrestha/vim-lsp'
 	Plug 'mattn/vim-lsp-settings'
 
+	Plug 'preservim/tagbar'
 call plug#end()
 " After adding de plugins: :PlugInstall
 " }}}
@@ -55,7 +56,7 @@ call plug#end()
 " MAPPINGS --------------------------------------------------------------- {{{
 
 " Mappings code goes here.
-
+nmap <F8> :TagbarToggle<CR>
 " }}}
 
 

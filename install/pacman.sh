@@ -11,6 +11,7 @@ base-devel git \
 bashtop \
 blueman bluedevil bluez-utils bluez \
 breeze-icons \
+ctags \
 docker docker-compose \
 dunst \
 fuse ntfs-3g \
