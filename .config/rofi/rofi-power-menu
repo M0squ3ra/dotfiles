@@ -23,8 +23,7 @@ texts[lockscreen]="lock screen"
 texts[switchuser]="switch user"
 texts[logout]="log out"
 texts[suspend]="suspend"
-texts[hibernate]="hibernate"
-texts[reboot]="reboot"
+texts[hibernate]="hibernate" texts[reboot]="reboot"
 texts[shutdown]="shut down"
 
 declare -A icons
@@ -39,7 +38,7 @@ icons[cancel]="\u00d7"
 
 declare -A actions
 #actions[lockscreen]="loginctl lock-session ${XDG_SESSION_ID-}"
-actions[lockscreen]="i3lock --nofork -B 5 -k --time-color=D1D1D1 --date-color=D1D1D1"
+actions[lockscreen]=""
 #actions[switchuser]="???"
 actions[logout]="loginctl terminate-session ${XDG_SESSION_ID-}"
 actions[suspend]="systemctl suspend"

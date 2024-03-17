@@ -3,52 +3,80 @@
 if ! [[ "$EUID" = 0 ]]; then
 	sudo true
 fi
-sudo pacman -S --noconfirm --needed \
-alacritty \
-adwaita-icon-theme \
-audacity \
-base-devel git \
-bashtop \
-blueman bluedevil bluez-utils bluez \
-breeze-icons \
-ctags \
-docker docker-compose \
-dunst \
-fuse ntfs-3g \
-gamemode lib32-gamemode \
-go \
-kcharselect \
-kdenlive \
-libreoffice-fresh \
-lutris \
-mixxx \
-nvidia-settings nvidia-utils nvidia-lts nvidia lib32-virtualgl lib32-nvidia-utils vulkan-icd-loader lib32-vulkan-icd-loader \
-nemo \
-neofetch \
-nitrogen \
-openssh \
-openrgb \
-okular \
-polybar \
-pipewire \
-pipewire-pulse \
-powerline powerline-fonts \
-pavucontrol-qt \
-picom \
-python-pip \
-rofi \
-steam \
-scrot \
-sddm \
-transmission-gtk \
-tor torbrowser-launcher \
-unzip \
-unrar \
-vlc \
-virt-manager qemu-desktop libvirt edk2-ovmf dnsmasq iptables-nft \
-wine \
-xclip \
-xorg-xprop \
-xorg-server xorg-apps xorg-xinit i3-wd \
-zsh 
+
+
+PS3="Select option: "
+
+select opt in Basico Nvidia Extra Laptop Quit; do
+	case $opt in
+		Basico)
+			echo "Basico"
+			sudo pacman -S --noconfirm --needed \
+			alacritty \
+			adwaita-icon-theme \
+			base-devel git \
+			blueman bluedevil bluez-utils bluez \
+			breeze-icons \
+			ctags \
+			dunst \
+			nemo \
+			neofetch \
+			nitrogen \
+			openssh \
+			okular \
+			polybar \
+			pipewire \
+			pipewire-pulse \
+			powerline powerline-fonts \
+			pavucontrol-qt \
+			picom \
+			rofi \
+			scrot \
+			unzip \
+			unrar \
+			xclip \
+			xorg-xprop \
+			xorg-server xorg-apps xorg-xinit i3-wd \
+			zsh
+			;;
+		Nvidia)
+			echo "Nvidia"
+			sudo pacman -S --noconfirm --needed nvidia-settings nvidia-utils nvidia-lts nvidia lib32-virtualgl lib32-nvidia-utils vulkan-icd-loader lib32-vulkan-icd-loader 
+			;;
+		Extra)
+			echo "Extra"
+			sudo pacman -S --noconfirm --needed \
+			audacity \
+			bashtop \
+			docker docker-compose \
+			fuse ntfs-3g \
+			gamemode lib32-gamemode \
+			go \
+			kcharselect \
+			kdenlive \
+			libreoffice-fresh \
+			lutris \
+			mixxx \
+			openrgb \
+			python-pip \
+			steam \
+			sddm \
+			transmission-gtk \
+			tor torbrowser-launcher \
+			vlc \
+			virt-manager qemu-desktop libvirt edk2-ovmf dnsmasq iptables-nft \
+			wine \
+			xautolock 
+			;;
+		Laptop)
+			echo "Laptop"
+			sudo pacman -S --noconfirm --needed sof-firmware
+			;;
+		Quit)
+			break;;
+		*)
+			echo "Invalid option $REPLY"
+			;;
+	esac
+done
 
