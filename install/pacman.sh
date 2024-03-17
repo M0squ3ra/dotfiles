@@ -21,6 +21,7 @@ select opt in Basico Nvidia Extra Laptop Quit; do
 			dunst \
 			nemo \
 			neofetch \
+			neovim \
 			nitrogen \
 			openssh \
 			okular \
