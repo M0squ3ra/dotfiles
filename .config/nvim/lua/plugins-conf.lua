@@ -21,4 +21,10 @@ require('mason-lspconfig').setup({
 	},
 })
 require('Comment').setup()
-require("ibl").setup()
+require("ibl").setup({
+	exclude = {
+		filetypes = {
+			"dashboard",
+		},
+	},
+})
