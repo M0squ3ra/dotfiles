@@ -26,6 +26,7 @@ let g:rainbow_active = 1
 " nnoremap ff :NERDTree ./<CR>
 " nnoremap ff :NERDTreeToggle<CR>
 nnoremap nt :NvimTreeToggle<CR>
+nnoremap ff :Telescope find_files hidden=true<CR>
 " z: zhrfgen bcpvbarf
 "
 " FOLDING
@@ -64,6 +65,9 @@ call plug#begin('~/.config/nvim/plugged')
 
 	Plug 'nvimdev/dashboard-nvim'
 	Plug 'nvim-tree/nvim-web-devicons'
+
+	Plug 'nvim-lua/plenary.nvim'
+	Plug 'nvim-telescope/telescope.nvim'
 
 call plug#end()
 " After adding de plugins: :PlugInstall
