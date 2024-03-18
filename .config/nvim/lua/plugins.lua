@@ -38,4 +38,6 @@ vim.call('plug#begin')
 	Plug 'nvim-telescope/telescope.nvim'
 
 	Plug 'numToStr/Comment.nvim'
+
+	Plug 'lukas-reineke/indent-blankline.nvim'
 vim.call('plug#end')
