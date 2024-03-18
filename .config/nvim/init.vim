@@ -45,16 +45,17 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'airblade/vim-gitgutter'	" git diff, etc
 	Plug 'frazrepo/vim-rainbow'	" colorize brackets
 
+	Plug 'williamboman/mason.nvim'
+	Plug 'williamboman/mason-lspconfig.nvim'
+
 	" LSP Support
 	Plug 'neovim/nvim-lspconfig'
 	" Autocompletion
 	Plug 'hrsh7th/nvim-cmp'
 	Plug 'hrsh7th/cmp-nvim-lsp'
 	Plug 'L3MON4D3/LuaSnip'
-	Plug 'VonHeikemen/lsp-zero.nvim'
 
-	Plug 'williamboman/mason.nvim'
-	Plug 'williamboman/mason-lspconfig.nvim'
+	Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v3.x'}
 
 	Plug 'preservim/tagbar'
 
@@ -109,11 +110,27 @@ augroup END
 
 lua << EOF
 require'dashboard'.setup{}
-require'nvim-tree'.setup{}
-require('lsp-zero')
-require('lspconfig').lua_ls.setup({})
-require("mason").setup()
-require("mason-lspconfig").setup()
+require'nvim-tree'.setup({
+	update_focused_file = {
+        	enable = true,
+        	update_root = true,
+        },
+})
+
+local lsp_zero = require('lsp-zero')
+
+lsp_zero.on_attach(function(client, bufnr)
+  -- see :help lsp-zero-keybindings
+  -- to learn the available actions
+  lsp_zero.default_keymaps({buffer = bufnr})
+end)
+require('mason').setup({})
+require('mason-lspconfig').setup({
+  ensure_installed = {},
+  handlers = {
+    lsp_zero.default_setup,
+  },
+})
 EOF
 
 " More Vimscripts code goes here.
