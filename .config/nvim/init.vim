@@ -4,7 +4,6 @@ syntax on
 filetype on
 filetype plugin on
 filetype indent on
-colorscheme sonokai
 set cursorline
 set incsearch
 set ignorecase
@@ -15,7 +14,7 @@ set updatetime=100
 set signcolumn=auto
 set noswapfile
 let g:rainbow_active = 1
-" Make the changes take effect: :source ~/.vimrc
+" Make the changes take effect: :so
 
 " VIM Cheatsheet
 " v: enters visual mode and selects text
@@ -24,9 +23,10 @@ let g:rainbow_active = 1
 " c: change text (deletes and set cursor)
 
 " Keyboard mapping
-nnoremap ff :NERDTree ./<CR>
-nnoremap ff :NERDTreeToggle<CR>
-" m: muestra opciones
+" nnoremap ff :NERDTree ./<CR>
+" nnoremap ff :NERDTreeToggle<CR>
+nnoremap nt :NvimTreeToggle<CR>
+" z: zhrfgen bcpvbarf
 "
 " FOLDING
 " zo: open a single fold under the cursor
@@ -38,7 +38,7 @@ nnoremap ff :NERDTreeToggle<CR>
 " PLUGINS ---------------------------------------------------------------- {{{
 call plug#begin('~/.config/nvim/plugged')
 	Plug 'dense-analysis/ale'	" linter
-	Plug 'preservim/nerdtree'	" file explorer
+	Plug 'nvim-tree/nvim-tree.lua'	" file explorer
 					" change tab: ctrl + ww
 	Plug 'tpope/vim-fugitive'	" :G <git command>
 	Plug 'airblade/vim-gitgutter'	" git diff, etc
@@ -48,10 +48,20 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'mattn/vim-lsp-settings'
 
 	Plug 'preservim/tagbar'
+
+	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+	Plug 'joshdick/onedark.vim'
+
+	Plug 'mateuszwieloch/automkdir.nvim'	" create intermediate folder
+
+	Plug 'nvimdev/dashboard-nvim'
+	Plug 'nvim-tree/nvim-web-devicons'
+
 call plug#end()
 " After adding de plugins: :PlugInstall
 " }}}
 
+colorscheme onedark
 
 " MAPPINGS --------------------------------------------------------------- {{{
 
@@ -84,6 +94,11 @@ augroup lsp_install
     au!
     autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
 augroup END
+
+lua << EOF
+require'dashboard'.setup{}
+require'nvim-tree'.setup{}
+EOF
 
 " More Vimscripts code goes here.
 
