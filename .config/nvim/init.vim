@@ -44,8 +44,16 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'airblade/vim-gitgutter'	" git diff, etc
 	Plug 'frazrepo/vim-rainbow'	" colorize brackets
 
-	Plug 'prabirshrestha/vim-lsp'
-	Plug 'mattn/vim-lsp-settings'
+	" LSP Support
+	Plug 'neovim/nvim-lspconfig'
+	" Autocompletion
+	Plug 'hrsh7th/nvim-cmp'
+	Plug 'hrsh7th/cmp-nvim-lsp'
+	Plug 'L3MON4D3/LuaSnip'
+	Plug 'VonHeikemen/lsp-zero.nvim'
+
+	Plug 'williamboman/mason.nvim'
+	Plug 'williamboman/mason-lspconfig.nvim'
 
 	Plug 'preservim/tagbar'
 
@@ -98,6 +106,10 @@ augroup END
 lua << EOF
 require'dashboard'.setup{}
 require'nvim-tree'.setup{}
+require('lsp-zero')
+require('lspconfig').lua_ls.setup({})
+require("mason").setup()
+require("mason-lspconfig").setup()
 EOF
 
 " More Vimscripts code goes here.
