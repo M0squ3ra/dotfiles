@@ -36,4 +36,6 @@ vim.call('plug#begin')
 
 	Plug 'nvim-lua/plenary.nvim'
 	Plug 'nvim-telescope/telescope.nvim'
+
+	Plug 'numToStr/Comment.nvim'
 vim.call('plug#end')
