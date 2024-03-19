@@ -48,7 +48,24 @@ require('gitblame').setup {
 	enabled = true,
 }
 
-require("bufferline").setup{}
+-- require("bufferline").setup{}
+local mocha = require("catppuccin.palettes").get_palette "macchiato"
+require('bufferline').setup {
+    highlights = require("catppuccin.groups.integrations.bufferline").get {
+        styles = { "italic", "bold" },
+        custom = {
+            all = {
+                fill = { bg = "#000000" },
+            },
+            mocha = {
+                background = { fg = mocha.text },
+            },
+            latte = {
+                background = { fg = "#000000" },
+            },
+        },
+    },
+}
 
 -- import nvim-treesitter plugin safely
 local status, treesitter = pcall(require, "nvim-treesitter.configs")
@@ -82,3 +99,13 @@ treesitter.setup({
 	-- auto install above language parsers
 	auto_install = true,
 })
+
+require('local-highlight').setup({
+	hlgroup = 'Search',
+	cw_hlgroup = nil,
+	-- Whether to display highlights in INSERT mode or not
+	insert_mode = false,
+	min_match_len = 1,
+	max_match_len = math.huge,
+})
+

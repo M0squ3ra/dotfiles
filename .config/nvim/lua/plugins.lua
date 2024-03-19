@@ -28,7 +28,7 @@ vim.call('plug#begin')
 			vim.cmd(':TSUpdate')
 		end
 	})
-	Plug 'joshdick/onedark.vim'
+	Plug('catppuccin/nvim', {as = 'catppuccin'})
 
 	Plug 'mateuszwieloch/automkdir.nvim'	-- create intermediate folder
 
@@ -48,4 +48,9 @@ vim.call('plug#begin')
 
 	Plug 'akinsho/bufferline.nvim'
 
+	Plug 'tzachar/local-highlight.nvim'
+
 vim.call('plug#end')
+
+
+
