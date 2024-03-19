@@ -43,3 +43,7 @@ require("ibl").setup({
 })
 
 require("nvim-autopairs").setup{}
+
+require('gitblame').setup {
+	enabled = true,
+}

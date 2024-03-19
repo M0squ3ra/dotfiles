@@ -43,5 +43,7 @@ vim.call('plug#begin')
 	Plug 'lukas-reineke/indent-blankline.nvim'
 
 	Plug 'windwp/nvim-autopairs'
+	
+	Plug 'f-person/git-blame.nvim'
 
 vim.call('plug#end')
