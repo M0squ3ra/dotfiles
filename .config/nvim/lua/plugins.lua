@@ -41,4 +41,7 @@ vim.call('plug#begin')
 	Plug 'numToStr/Comment.nvim'
 
 	Plug 'lukas-reineke/indent-blankline.nvim'
+
+	Plug 'windwp/nvim-autopairs'
+
 vim.call('plug#end')
