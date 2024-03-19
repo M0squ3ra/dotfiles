@@ -13,6 +13,19 @@ lsp_zero.on_attach(function(client, bufnr)
 	-- to learn the available actions
 	lsp_zero.default_keymaps({buffer = bufnr})
 end)
+
+local cmp = require('cmp')
+
+cmp.setup({
+	mapping = cmp.mapping.preset.insert({
+		['<CR>'] = cmp.mapping.confirm({select = false}),
+	}),
+	preselect = 'item',
+	completion = {
+		completeopt = 'menu,menuone,noinsert'
+	},
+})
+
 require('mason').setup({})
 require('mason-lspconfig').setup({
 	ensure_installed = {},
