@@ -47,3 +47,5 @@ require("nvim-autopairs").setup{}
 require('gitblame').setup {
 	enabled = true,
 }
+
+require("bufferline").setup{}

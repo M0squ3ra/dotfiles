@@ -46,4 +46,6 @@ vim.call('plug#begin')
 	
 	Plug 'f-person/git-blame.nvim'
 
+	Plug 'akinsho/bufferline.nvim'
+
 vim.call('plug#end')
