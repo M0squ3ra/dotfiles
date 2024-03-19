@@ -49,20 +49,20 @@ require('gitblame').setup {
 }
 
 -- require("bufferline").setup{}
-local mocha = require("catppuccin.palettes").get_palette "macchiato"
+local macchiato = require("catppuccin.palettes").get_palette "macchiato"
 require('bufferline').setup {
     highlights = require("catppuccin.groups.integrations.bufferline").get {
         styles = { "italic", "bold" },
         custom = {
-            all = {
-                fill = { bg = "#000000" },
+--             all = {
+--                 fill = { bg = "#000000" },
+--             },
+            macchiato = {
+                background = { fg = macchiato.text },
             },
-            mocha = {
-                background = { fg = mocha.text },
-            },
-            latte = {
-                background = { fg = "#000000" },
-            },
+--             latte = {
+--                 background = { fg = "#000000" },
+--             },
         },
     },
 }
