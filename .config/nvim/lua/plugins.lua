@@ -4,7 +4,7 @@ vim.call('plug#begin')
 	Plug 'dense-analysis/ale'			-- linter
 	Plug 'nvim-tree/nvim-tree.lua'			-- file explorer
 	Plug 'tpope/vim-fugitive'			-- :G <git command>
-	Plug 'airblade/vim-gitgutter'			-- git diff, etc
+	Plug 'lewis6991/gitsigns.nvim'			-- git diff, etc
 	Plug 'frazrepo/vim-rainbow'			-- colorize brackets
 	Plug 'williamboman/mason.nvim'
 	Plug 'williamboman/mason-lspconfig.nvim'

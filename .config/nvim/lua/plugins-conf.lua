@@ -117,3 +117,4 @@ require('local-highlight').setup({
 })
 
 require('leap').create_default_mappings()
+require('gitsigns').setup()
