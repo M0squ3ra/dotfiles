@@ -37,6 +37,7 @@ vim.call('plug#begin')
 	Plug 'tzachar/local-highlight.nvim'		-- highlight uses of word under the cursor
 	Plug 'tpope/vim-repeat'				-- general-purpose motion plugin
 	Plug 'ggandor/leap.nvim'
+	Plug 'rmagatti/goto-preview'			-- previe native LSP's goto definition
 vim.call('plug#end')
 
 
