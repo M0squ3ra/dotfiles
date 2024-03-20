@@ -51,20 +51,27 @@ require('gitblame').setup {
 -- require("bufferline").setup{}
 local macchiato = require("catppuccin.palettes").get_palette "macchiato"
 require('bufferline').setup {
-    highlights = require("catppuccin.groups.integrations.bufferline").get {
-        styles = { "italic", "bold" },
-        custom = {
---             all = {
---                 fill = { bg = "#000000" },
---             },
-            macchiato = {
-                background = { fg = macchiato.text },
-            },
---             latte = {
---                 background = { fg = "#000000" },
---             },
-        },
-    },
+	highlights = require("catppuccin.groups.integrations.bufferline").get {
+        	styles = { "italic", "bold" },
+		custom = {
+			macchiato = {
+                		background = { fg = macchiato.text },
+			},
+		},
+	},
+	options = {
+		diagnostics = "nvim_lsp",
+		diagnostics_indicator = function(count, level, diagnostics_dict, context)
+			local s = " "
+			for e, n in pairs(diagnostics_dict) do
+				local sym = e == "error" and " "
+					or (e == "warning" and "" or "" )
+				s = s .. n .. sym
+			end
+			return s
+		end,
+	}
+	
 }
 
 -- import nvim-treesitter plugin safely
@@ -109,3 +116,4 @@ require('local-highlight').setup({
 	max_match_len = math.huge,
 })
 
+require('leap').create_default_mappings()

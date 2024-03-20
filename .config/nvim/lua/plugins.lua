@@ -50,6 +50,8 @@ vim.call('plug#begin')
 
 	Plug 'tzachar/local-highlight.nvim'
 
+	Plug 'tpope/vim-repeat'
+	Plug 'ggandor/leap.nvim'
 vim.call('plug#end')
 
 
