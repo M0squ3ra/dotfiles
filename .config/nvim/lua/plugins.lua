@@ -38,6 +38,7 @@ vim.call('plug#begin')
 	Plug 'tpope/vim-repeat'				-- general-purpose motion plugin
 	Plug 'ggandor/leap.nvim'
 	Plug 'rmagatti/goto-preview'			-- previe native LSP's goto definition
+	Plug 'mfussenegger/nvim-lint'
 vim.call('plug#end')
 
 

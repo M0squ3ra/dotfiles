@@ -33,7 +33,7 @@ require('keymaps')
 
 
 require("catppuccin").setup({
-    flavour = "macchiato", -- latte, frappe, macchiato, mocha
+    flavour = "frappe", -- latte, frappe, macchiato, mocha
     color_overrides = {},
     custom_highlights = {},
     integrations = {
