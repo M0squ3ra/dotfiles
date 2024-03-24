@@ -119,14 +119,3 @@ require('local-highlight').setup({
 require('leap').create_default_mappings()
 require('gitsigns').setup()
 require('goto-preview').setup {}
-require('lint').linters_by_ft = {
-	markdown = {'vale',},
-	javascript = {'eslint_d'},
-	typescript = {'eslint_d'},
-	python = {'pylint'}
-}
-vim.api.nvim_create_autocmd({ "BufEnter","BufWritePost", "InsertLeave", "TextChanged" }, {
-  callback = function()
-    require("lint").try_lint()
-  end,
-})
