@@ -44,6 +44,7 @@ vim.call('plug#begin')
 	Plug 'rmagatti/goto-preview'			-- preview native LSP's goto definition
 	-- Plug 'mfussenegger/nvim-lint'
 	Plug 'sindrets/diffview.nvim'			-- preview all git diffs
+	Plug 'dstein64/nvim-scrollview'
 vim.call('plug#end')
 
 
