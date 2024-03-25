@@ -38,6 +38,7 @@ select opt in Basico Nvidia Extra Laptop Quit; do
 			xclip \
 			xorg-xprop \
 			xorg-server xorg-apps xorg-xinit i3-wd \
+			xss-lock \
 			zsh
 			;;
 		Nvidia)
