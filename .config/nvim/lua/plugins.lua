@@ -13,9 +13,13 @@ vim.call('plug#begin')
 	-- Autocompletion --
 	Plug 'hrsh7th/nvim-cmp'
 	Plug 'hrsh7th/cmp-nvim-lsp'
+	Plug 'hrsh7th/cmp-buffer'
+	Plug 'hrsh7th/cmp-nvim-lsp'
 	Plug 'L3MON4D3/LuaSnip'
+	Plug 'saadparwaiz1/cmp_luasnip'
 	Plug 'rafamadriz/friendly-snippets'
 	Plug('VonHeikemen/lsp-zero.nvim', {branch = 'v3.x'})
+	Plug 'onsails/lspkind.nvim'
 	--------------------
 	Plug 'preservim/tagbar'				-- browse the tags of the current file and get an overview of its structure 
 	Plug('nvim-treesitter/nvim-treesitter', {
