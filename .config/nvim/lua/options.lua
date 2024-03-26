@@ -15,10 +15,8 @@ vim.cmd([[
 	filetype plugin on
 	filetype indent on
 
-
-	augroup filetype_vim
-	    autocmd!
-	    autocmd FileType vim setlocal foldmethod=marker
-	augroup END
+	set foldmethod=expr
+	set foldexpr=nvim_treesitter#foldexpr()
+	autocmd BufReadPost,FileReadPost * normal zR
 ]])
 vim.g.rainbow_active = 1
