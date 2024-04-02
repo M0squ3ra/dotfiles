@@ -7,39 +7,39 @@ fi
 
 PS3="Select option: "
 
-select opt in Basico Nvidia Extra Laptop Quit; do
+select opt in Basico Nvidia Extra Laptop DevOps Quit; do
 	case $opt in
 		Basico)
 			echo "Basico"
 			sudo pacman -S --noconfirm --needed \
-			alacritty \
-			adwaita-icon-theme \
-			base-devel git \
-			blueman bluedevil bluez-utils bluez \
-			breeze-icons \
-			ctags \
-			dunst \
-			nemo \
-			neofetch \
-			neovim \
-			nitrogen \
-			openssh \
-			okular \
-			polybar \
-			pipewire \
-			pipewire-pulse \
-			powerline powerline-fonts \
-			pavucontrol-qt \
-			picom \
-			rofi \
-			scrot \
-			unzip \
-			unrar \
-			xclip \
-			xorg-xprop \
-			xorg-server xorg-apps xorg-xinit i3-wd \
-			xss-lock \
-			zsh
+				alacritty \
+				adwaita-icon-theme \
+				base-devel git \
+				blueman bluedevil bluez-utils bluez \
+				breeze-icons \
+				ctags \
+				dunst \
+				nemo \
+				neofetch \
+				neovim \
+				nitrogen \
+				openssh \
+				okular \
+				polybar \
+				pipewire \
+				pipewire-pulse \
+				powerline powerline-fonts \
+				pavucontrol-qt \
+				picom \
+				rofi \
+				scrot \
+				unzip \
+				unrar \
+				xclip \
+				xorg-xprop \
+				xorg-server xorg-apps xorg-xinit i3-wd \
+				xss-lock \
+				zsh
 			;;
 		Nvidia)
 			echo "Nvidia"
@@ -48,31 +48,38 @@ select opt in Basico Nvidia Extra Laptop Quit; do
 		Extra)
 			echo "Extra"
 			sudo pacman -S --noconfirm --needed \
-			audacity \
-			bashtop \
-			docker docker-compose \
-			fuse ntfs-3g \
-			gamemode lib32-gamemode \
-			go \
-			kcharselect \
-			kdenlive \
-			libreoffice-fresh \
-			lutris \
-			mixxx \
-			openrgb \
-			python-pip \
-			steam \
-			sddm \
-			transmission-gtk \
-			tor torbrowser-launcher \
-			vlc \
-			virt-manager qemu-desktop libvirt edk2-ovmf dnsmasq iptables-nft \
-			wine \
-			xautolock 
+				audacity \
+				bashtop \
+				fuse ntfs-3g \
+				gamemode lib32-gamemode \
+				go \
+				kcharselect \
+				kdenlive \
+				libreoffice-fresh \
+				lutris \
+				mixxx \
+				openrgb \
+				python-pip \
+				steam \
+				sddm \
+				transmission-gtk \
+				tor torbrowser-launcher \
+				vlc \
+				virt-manager qemu-desktop libvirt edk2-ovmf dnsmasq iptables-nft \
+				wine \
+				xautolock 
 			;;
 		Laptop)
 			echo "Laptop"
 			sudo pacman -S --noconfirm --needed sof-firmware
+			;;
+		DevOps)
+			echo "DevOps"
+			sudo pacman -S --noconfirm --needed \
+				docker \
+				docker-compose \
+				kubectl \
+				minikube
 			;;
 		Quit)
 			break;;
