@@ -9,6 +9,7 @@ packages=(
 	"dracula-gtk-theme"
 	"i3-gaps-rounded-git"
 	"i3lock-color"
+	"kubecolor"
 	"mirage"
 	"font-manager-git"
 	"rofi-file-browser-extended-git"

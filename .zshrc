@@ -66,7 +66,7 @@ typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 echo
 neofetch
 alias config='/usr/bin/git --git-dir=/home/m0squ3ra/.dotfiles/ --work-tree=/home/m0squ3ra'
-alias k=kubectl
+alias k=kubecolor
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
