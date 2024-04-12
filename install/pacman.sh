@@ -79,7 +79,8 @@ select opt in Basico Nvidia Extra Laptop DevOps Quit; do
 				docker \
 				docker-compose \
 				kubectl \
-				minikube
+				minikube \
+				helm
 			;;
 		Quit)
 			break;;
