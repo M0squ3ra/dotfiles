@@ -23,6 +23,7 @@ select opt in Basico Nvidia Extra Laptop DevOps Quit; do
 				neofetch \
 				neovim \
 				nitrogen \
+				npt \
 				openssh \
 				okular \
 				polybar \

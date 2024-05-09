@@ -4,6 +4,8 @@ systemctl enable <service>
 - systemd-resolved.service
 - iwd.service
 - dhcpcd.service
+- ntpd.service
+- ntpdate.service
 
 systemctl --user enable <servicev>
 - greenclip.service
