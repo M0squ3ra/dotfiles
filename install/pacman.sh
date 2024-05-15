@@ -7,7 +7,7 @@ fi
 
 PS3="Select option: "
 
-select opt in Basico Nvidia Extra Laptop DevOps Quit; do
+select opt in Basico Nvidia Extra Laptop DevOps Java Quit; do
 	case $opt in
 		Basico)
 			echo "Basico"
@@ -32,6 +32,7 @@ select opt in Basico Nvidia Extra Laptop DevOps Quit; do
 				powerline powerline-fonts \
 				pavucontrol-qt \
 				picom \
+				ripgrep \
 				rofi \
 				scrot \
 				unzip \
@@ -82,6 +83,12 @@ select opt in Basico Nvidia Extra Laptop DevOps Quit; do
 				kubectl \
 				minikube \
 				helm
+			;;
+		Java)
+			echo "Java"
+			sudo pacman -S --noconfirm --needed \
+				jdk17-openjdk \
+				maven
 			;;
 		Quit)
 			break;;
