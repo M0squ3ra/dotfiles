@@ -1,0 +1,1 @@
+descargar lombok.jar y ubicarlo en .local/share/nvim/mason/packages/jdtls/plugins

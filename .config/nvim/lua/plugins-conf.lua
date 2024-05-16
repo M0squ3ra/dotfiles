@@ -14,6 +14,7 @@ lsp_zero.on_attach(function(client, bufnr)
 	lsp_zero.default_keymaps({buffer = bufnr})
 end)
 
+
 local cmp = require('cmp')
 local cmp_action = require('lsp-zero').cmp_action()
 require('luasnip.loaders.from_vscode').lazy_load()
@@ -63,9 +64,31 @@ require('mason').setup({})
 require('mason-lspconfig').setup({
 	ensure_installed = {},
 	handlers = {
-		lsp_zero.default_setup,
+		-- lsp_zero.default_setup,
+		function(server_name)
+			require('lspconfig')[server_name].setup({})
+		end,
+		jdtls = lsp_zero.noop,
 	},
 })
+require('mason-tool-installer').setup {
+	ensure_installed = {
+		'bash-language-server',
+		'dockerfile-language-server',
+		'gopls',
+		'java-debug-adapter',
+		'java-test',
+		'jdtls',
+		'python-lsp-server',
+		'typescript-language-server',
+		'typos-lsp',
+		'vim-language-server',
+		'yaml-language-server'
+	},
+	auto_update = true,
+	run_on_start = true,
+	debounce_hours = 24
+}
 require('Comment').setup()
 require("ibl").setup({
 	exclude = {
@@ -134,7 +157,8 @@ treesitter.setup({
 		"vim",
 		"dockerfile",
 		"gitignore",
-		"python"
+		"python",
+		"go"
 	},
 	-- auto install above language parsers
 	auto_install = true,
@@ -152,3 +176,106 @@ require('local-highlight').setup({
 require('leap').create_default_mappings()
 require('gitsigns').setup()
 require('goto-preview').setup {}
+
+
+-- DAP
+opts = {
+	controls = {
+		element = "repl",
+		enabled = false,
+		icons = {
+			disconnect = "",
+			pause = "",
+			play = "",
+			run_last = "",
+			step_back = "",
+			step_into = "",
+			step_out = "",
+			step_over = "",
+			terminate = ""
+		}
+	},
+	element_mappings = {},
+	expand_lines = true,
+	floating = {
+		border = "single",
+		mappings = {
+			close = { "q", "<Esc>" }
+		}
+	},
+	force_buffers = true,
+	icons = {
+		collapsed = "",
+		current_frame = "",
+        	expanded = ""
+	},
+	layouts = {
+		{
+			elements = {
+        			{
+					id = "scopes",
+			        	size = 0.50
+				},
+				{
+					id = "stacks",
+        				size = 0.30
+        				},
+        			{
+        				id = "watches",
+        				size = 0.10
+        			},
+        			{
+        				id = "breakpoints",
+        				size = 0.10
+        			}
+        		},
+			size = 30,
+        		position = "left", -- Can be "left" or "right"
+		},
+		{
+        		elements = {
+        			"repl",
+        			"console",
+        		},
+        		size = 10,
+        		position = "bottom", -- Can be "bottom" or "top"
+		}
+	},
+	mappings = {
+		edit = "e",
+		expand = { "<CR>", "<2-LeftMouse>" },
+		open = "o",
+		remove = "d",
+		repl = "r",
+		toggle = "t"
+	},
+	render = {
+		indent = 1,
+		max_value_lines = 100
+	}
+}
+local dap = require('dap')
+require('dapui').setup(opts)
+
+dap.listeners.after.event_initialized["dapui_config"] = function()
+	require('dapui').open()
+end
+
+dap.listeners.before.event_terminated["dapui_config"] = function()
+-- Commented to prevent DAP UI from closing when unit tests finish
+-- require('dapui').close()
+end
+
+dap.listeners.before.event_exited["dapui_config"] = function()
+-- Commented to prevent DAP UI from closing when unit tests finish
+-- require('dapui').close()
+end
+
+
+
+
+
+
+
+
+

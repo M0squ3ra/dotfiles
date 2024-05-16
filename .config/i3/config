@@ -42,6 +42,8 @@ exec --no-startup-id nm-applet
 exec_always --no-startup-id setxkbmap us
 
 bindsym $mod+Return exec alacritty
+#ñ
+bindsym --release Mod1+n exec "xdotool key U00f1"
 
 #exec_always --no-startup-id xrandr --output HDMI-0 --auto --left-of DP-2
 set $monitor_left "HDMI-0"
@@ -56,7 +58,7 @@ exec_always --no-startup-id xrandr --output $monitor_right --auto --primary --ri
 gaps inner 6
 gaps outer 6
 #gaps top 30
-#border_radius 8
+border_radius 8
 
 #bindsym $mod+b exec brave
 
