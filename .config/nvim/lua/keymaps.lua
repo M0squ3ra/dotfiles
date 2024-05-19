@@ -1,7 +1,13 @@
+-- check current mapping:
+-- :nmap normal mode
+-- :vmap visual mode
+-- :imap insert mode
+-- :map <prefix> check mapping for prefix
+
 vim.keymap.set('n', 'nt', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', 'ff', ':Telescope find_files hidden=true<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', 'fg', ':Telescope live_grep<CR>', { noremap = true, silent = true})
-vim.keymap.set('n', '<F8>', ':TagbarToggle<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<F11>', ':TagbarToggle<CR>', { noremap = true, silent = true })
 -- Mapeo de teclas para pasar al siguiente buffer
 vim.keymap.set('n', '<C-l>', ':bn<CR>', { noremap = true, silent = true })
 -- Mapeo de teclas para pasar al buffer anterior
@@ -34,8 +40,8 @@ vim.keymap.set('n', '<leader>bl', ':lua require"dap".set_breakpoint(nil, nil, vi
 vim.keymap.set('n', '<leader>dr', ':lua require"dap".repl.open()<CR>')
 -- move in debug
 vim.keymap.set('n', '<F5>', ':lua require"dap".continue()<CR>')
-vim.keymap.set('n', '<F8>', ':lua require"dap".step_over()<CR>')
 vim.keymap.set('n', '<F7>', ':lua require"dap".step_into()<CR>')
+vim.keymap.set('n', '<F8>', ':lua require"dap".step_over()<CR>')
 vim.keymap.set('n', '<S-F8>', ':lua require"dap".step_out()<CR>')
 
 -- view information in debug
@@ -82,6 +88,8 @@ end
 function run_spring_boot(debug)
   vim.cmd('term ' .. get_spring_boot_runner(method_name, debug))
 end
+
+-- Java specific keybindings
 vim.keymap.set("n", "<leader>tm", function() run_java_test_method() end)
 vim.keymap.set("n", "<leader>TM", function() run_java_test_method(true) end)
 vim.keymap.set("n", "<leader>tc", function() run_java_test_class() end)
