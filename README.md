@@ -90,4 +90,11 @@ config submodule update --init
 rm -r $HOME/.oh-my-zsh/custom && ln -s $HOME/oh-my-zsh-custom .oh-my-zsh/custom
 ```
 
+### Instalar java-debug
+```
+cd ~/java-debug
+mvn clean install
+```
+
 Todo listo, a partir de ahora puedes escribir comandos config para añadir y actualizar tus archivos ocultos:
+
