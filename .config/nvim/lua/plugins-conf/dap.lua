@@ -75,6 +75,7 @@ opts = {
 	}
 }
 local dap = require('dap')
+require('dap-go').setup()
 require('dapui').setup(opts)
 dap.listeners.after.event_initialized["dapui_config"] = function()
 	require('dapui').open()

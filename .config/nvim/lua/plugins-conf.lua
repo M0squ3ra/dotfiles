@@ -56,7 +56,8 @@ cmp.setup({
 		{name = 'nvim_lsp'},
 		{name = 'buffer'},
 		{name = 'nvim_lua'},
-		{name = 'luasnip'}
+		{name = 'luasnip'},
+		{name = 'nvim_lsp_signature_help'}
 	}
 })
 
@@ -78,6 +79,7 @@ require('mason-tool-installer').setup {
 		'gopls',
 		'java-debug-adapter',
 		'java-test',
+		'delve',
 		'jdtls',
 		'python-lsp-server',
 		'typescript-language-server',
@@ -116,15 +118,8 @@ require('local-highlight').setup({
 require('leap').create_default_mappings()
 require('gitsigns').setup()
 require('goto-preview').setup {}
+require('telescope').load_extension('harpoon')
 
 require('plugins-conf/dap')
 require('plugins-conf/treesitter')
 require('plugins-conf/bufferline')
-
-
-
-
-
-
-
-

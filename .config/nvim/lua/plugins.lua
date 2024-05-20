@@ -41,7 +41,7 @@ vim.call('plug#begin')
 	Plug 'windwp/nvim-autopairs'			-- autopair
 	Plug 'f-person/git-blame.nvim'			-- git blame
 	Plug 'akinsho/bufferline.nvim'			-- buffer line with tabpage integration
-	Plug 'tzachar/local-highlight.nvim'		-- highlight uses of word under the cursor
+	Plug 'tzachar/local-highlight.nvim'		-- hghlight uses of word under the cursor
 	Plug 'tpope/vim-repeat'				-- general-purpose motion plugin
 	Plug 'ggandor/leap.nvim'
 	Plug 'rmagatti/goto-preview'			-- preview native LSP's goto definition
@@ -50,8 +50,11 @@ vim.call('plug#begin')
 	Plug 'dstein64/nvim-scrollview'
 	Plug 'mfussenegger/nvim-dap' 			-- Debug Adapter Protocol implementation
 	Plug 'mfussenegger/nvim-jdtls' 			-- Java Extension for LSP
+	Plug 'leoluz/nvim-dap-go' 			-- Go extension for delve (debugger)
 	Plug 'nvim-neotest/nvim-nio' 			-- asynchronous IO in Neovim
 	Plug 'rcarriga/nvim-dap-ui' 			-- A UI for nvim-dap
+	Plug 'ThePrimeagen/harpoon' 			-- Mark files and access it easily
+	Plug 'hrsh7th/cmp-nvim-lsp-signature-help' 		-- Show function signature when you type
 vim.call('plug#end')
 
 
