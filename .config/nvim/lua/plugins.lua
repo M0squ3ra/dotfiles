@@ -39,7 +39,6 @@ vim.call('plug#begin')
 	Plug 'numToStr/Comment.nvim'			-- commenting plugin
 	Plug 'lukas-reineke/indent-blankline.nvim'	-- adds indentation guides
 	Plug 'windwp/nvim-autopairs'			-- autopair
-	Plug 'f-person/git-blame.nvim'			-- git blame
 	Plug 'akinsho/bufferline.nvim'			-- buffer line with tabpage integration
 	Plug 'tzachar/local-highlight.nvim'		-- hghlight uses of word under the cursor
 	Plug 'tpope/vim-repeat'				-- general-purpose motion plugin
