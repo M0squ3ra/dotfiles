@@ -76,15 +76,16 @@ opts = {
 }
 local dap = require('dap')
 require('dap-go').setup()
-require('dapui').setup(opts)
+local dapui = require('dapui')
+dapui.setup(opts)
 dap.listeners.after.event_initialized["dapui_config"] = function()
-	require('dapui').open()
+	dapui.open()
 end
 dap.listeners.before.event_terminated["dapui_config"] = function()
 -- Commented to prevent DAP UI from closing when unit tests finish
--- require('dapui').close()
+	-- dapui.close()
 end
-dap.listeners.before.event_exited["dapui_config"] = function()
+dap.listeners.after.event_exited["dapui_config"] = function()
 -- Commented to prevent DAP UI from closing when unit tests finish
--- require('dapui').close()
+	dapui.close()
 end
