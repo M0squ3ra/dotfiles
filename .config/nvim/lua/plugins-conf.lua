@@ -4,6 +4,13 @@ require'nvim-tree'.setup({
         	enable = true,
         	update_root = true,
         },
+	view = {
+		adaptive_size = true,
+		centralize_selection = true,
+	},
+	renderer = {
+		highlight_opened_files = "name",
+	}
 })
 
 local lsp_zero = require('lsp-zero')
