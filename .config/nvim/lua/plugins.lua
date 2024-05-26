@@ -54,6 +54,8 @@ vim.call('plug#begin')
 	Plug 'rcarriga/nvim-dap-ui' 			-- A UI for nvim-dap
 	Plug 'ThePrimeagen/harpoon' 			-- Mark files and access it easily
 	Plug 'hrsh7th/cmp-nvim-lsp-signature-help' 		-- Show function signature when you type
+	Plug 'aznhe21/actions-preview.nvim' 		-- Preview code actions with telescope
+	Plug 'akinsho/toggleterm.nvim' 			-- Terminal emulator
 vim.call('plug#end')
 
 

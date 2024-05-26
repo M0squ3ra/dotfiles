@@ -8,7 +8,7 @@ vim.keymap.set('n', 'nt', ':NvimTreeToggle<CR>', { noremap = true, silent = true
 vim.keymap.set('n', 'ff', ':Telescope find_files hidden=true<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', 'fg', ':Telescope live_grep<CR>', { noremap = true, silent = true})
 vim.keymap.set('n', '<F11>', ':TagbarToggle<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>')
+vim.keymap.set({ "v", "n" }, "<leader>ca", require("actions-preview").code_actions)
 -- Mapeo de teclas para pasar al siguiente buffer
 vim.keymap.set('n', '<C-l>', ':bn<CR>', { noremap = true, silent = true })
 -- Mapeo de teclas para pasar al buffer anterior
@@ -20,6 +20,8 @@ vim.keymap.set("n", "gP", "<cmd>lua require('goto-preview').close_all_win()<CR>"
 vim.keymap.set("n", "<leader>ha", require('harpoon.mark').add_file, {noremap=true})
 -- vim.keymap.set("n", "<leader>ht", require('harpoon.ui').toggle_quick_menu, {noremap=true})
 vim.keymap.set("n", "<leader>ht", ':Telescope harpoon marks<CR>', {noremap=true})
+vim.keymap.set("n", "<leader>tf", ':ToggleTerm direction=float<CR>', {noremap=true})
+vim.keymap.set("n", "<leader>tt", ':ToggleTerm direction=tab<CR>', {noremap=true})
 
 function attach_to_debug()
   local dap = require('dap')
