@@ -8,6 +8,7 @@ vim.keymap.set('n', 'nt', ':NvimTreeToggle<CR>', { noremap = true, silent = true
 vim.keymap.set('n', 'ff', ':Telescope find_files hidden=true<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', 'fg', ':Telescope live_grep<CR>', { noremap = true, silent = true})
 vim.keymap.set('n', '<F11>', ':TagbarToggle<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>')
 -- Mapeo de teclas para pasar al siguiente buffer
 vim.keymap.set('n', '<C-l>', ':bn<CR>', { noremap = true, silent = true })
 -- Mapeo de teclas para pasar al buffer anterior
@@ -55,3 +56,7 @@ end
 
 
 vim.keymap.set('n', 'gs', ':lua show_dap_centered_scopes()<CR>')
+
+
+
+

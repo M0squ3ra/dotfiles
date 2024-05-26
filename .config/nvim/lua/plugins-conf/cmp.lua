@@ -1,6 +1,8 @@
+local lsp_zero = require("lsp-zero")
 local cmp = require('cmp')
-local cmp_action = require('lsp-zero').cmp_action()
+local cmp_action = lsp_zero.cmp_action()
 require('luasnip.loaders.from_vscode').lazy_load()
+
 cmp.setup({
 	mapping = cmp.mapping.preset.insert({
 		['<CR>'] = cmp.mapping.confirm({select = false}),

@@ -172,6 +172,7 @@ function run_spring_boot(debug)
 end
 
 -- Java specific keybindings
+vim.keymap.set('n', '<leader>o', require('jdtls').organize_imports, {noremap=true})
 vim.keymap.set("n", "<leader>tm", function() run_java_test_method() end)
 vim.keymap.set("n", "<leader>TM", function() run_java_test_method(true) end)
 vim.keymap.set("n", "<leader>tc", function() run_java_test_class() end)
