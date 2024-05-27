@@ -22,6 +22,7 @@ vim.call('plug#begin')
 	Plug('VonHeikemen/lsp-zero.nvim', {branch = 'v3.x'})
 	Plug 'onsails/lspkind.nvim'
 	Plug 'rcarriga/cmp-dap' 			-- autocompletion for nvim-dap
+	Plug 'j-hui/fidget.nvim'
 	--------------------
 	Plug 'preservim/tagbar'				-- browse the tags of the current file and get an overview of its structure 
 	Plug('nvim-treesitter/nvim-treesitter', {

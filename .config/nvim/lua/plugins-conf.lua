@@ -16,6 +16,7 @@ require('plugins-conf/toggleterm')
 require('plugins-conf/local-highlight')
 require('plugins-conf/gitsigns')
 require('plugins-conf/ibl')
+require('plugins-conf/fidget')
 
 require('Comment').setup()
 require('nvim-autopairs').setup{}
