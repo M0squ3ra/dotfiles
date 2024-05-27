@@ -29,6 +29,7 @@ vim.call('plug#begin')
 			vim.cmd(':TSUpdate')
 		end
 	})
+	Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 	Plug 'nvim-treesitter/nvim-treesitter-context'
 	Plug('catppuccin/nvim', {as = 'catppuccin'})	-- theme
 	Plug 'mateuszwieloch/automkdir.nvim'		-- create intermediate folder
