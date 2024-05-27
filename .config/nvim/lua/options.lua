@@ -8,6 +8,7 @@ vim.opt.showmatch = true
 vim.opt.hlsearch = true
 vim.opt.updatetime = 100
 vim.o.signcolumn="auto"
+vim.o.scrolloff = 8
 vim.cmd([[
 	set noswapfile
 	syntax on
