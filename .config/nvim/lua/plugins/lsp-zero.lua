@@ -10,6 +10,7 @@ return {
 		"hrsh7th/cmp-nvim-lsp",
 		"hrsh7th/cmp-buffer",
 		"hrsh7th/cmp-nvim-lsp",
+		"hrsh7th/cmp-path",
 		"L3MON4D3/LuaSnip",
 		"saadparwaiz1/cmp_luasnip",
 		"rafamadriz/friendly-snippets",
@@ -50,11 +51,14 @@ return {
 						nvim_lsp = "λ",
 						luasnip = "⋗",
 						buffer = "Ω",
-						path = "🖫",
 						nvim_lua = "Π",
 					}
-
-					item.menu = menu_icon[entry.source.name]
+					if entry.source.name == "path" then
+						local is_directory = entry:get_completion_item().label:sub(-1) == "/"
+						item.menu = is_directory and "📂" or "📄"
+					else
+						item.menu = menu_icon[entry.source.name] or ""
+					end
 					return item
 				end,
 			},
@@ -69,6 +73,7 @@ return {
 				{ name = "nvim_lua" },
 				{ name = "luasnip" },
 				{ name = "nvim_lsp_signature_help" },
+				{ name = "path" },
 			},
 		})
 
