@@ -42,74 +42,74 @@ local config = {
       -- TODO Replace this with the absolute path to your main java version (JDK 17 or higher)
       home = '/usr/lib/jvm/java-17-openjdk',
       eclipse = {
-        downloadSources = true,
+	downloadSources = true,
       },
       configuration = {
-        updateBuildConfiguration = "interactive",
-        runtimes = {
-          -- {
-          --   name = "JavaSE-11",
-          --   path = "/usr/lib/jvm/java-11-openjdk",
-          -- },
-          {
-            name = "JavaSE-17",
-            path = "/usr/lib/jvm/java-17-openjdk",
-          },
-          -- {
-          --   name = "JavaSE-19",
-          --   path = "/usr/lib/jvm/java-19-openjdk",
-          -- }
-        }
+	updateBuildConfiguration = "interactive",
+	runtimes = {
+	  -- {
+	  --   name = "JavaSE-11",
+	  --   path = "/usr/lib/jvm/java-11-openjdk",
+	  -- },
+	  {
+	    name = "JavaSE-17",
+	    path = "/usr/lib/jvm/java-17-openjdk",
+	  },
+	  -- {
+	  --   name = "JavaSE-19",
+	  --   path = "/usr/lib/jvm/java-19-openjdk",
+	  -- }
+	}
       },
       maven = {
-        downloadSources = true,
+	downloadSources = true,
       },
       implementationsCodeLens = {
-        enabled = true,
+	enabled = true,
       },
       referencesCodeLens = {
-        enabled = true,
+	enabled = true,
       },
       references = {
-        includeDecompiledSources = true,
+	includeDecompiledSources = true,
       },
       signatureHelp = { enabled = true },
       format = {
-        enabled = true,
-        -- Formatting works by default, but you can refer to a specific file/URL if you choose
-        -- settings = {
-        --   url = "https://github.com/google/styleguide/blob/gh-pages/intellij-java-google-style.xml",
-        --   profile = "GoogleStyle",
-        -- },
+	enabled = true,
+	-- Formatting works by default, but you can refer to a specific file/URL if you choose
+	-- settings = {
+	--   url = "https://github.com/google/styleguide/blob/gh-pages/intellij-java-google-style.xml",
+	--   profile = "GoogleStyle",
+	-- },
       },
     },
     completion = {
       favoriteStaticMembers = {
-        "org.hamcrest.MatcherAssert.assertThat",
-        "org.hamcrest.Matchers.*",
-        "org.hamcrest.CoreMatchers.*",
-        "org.junit.jupiter.api.Assertions.*",
-        "java.util.Objects.requireNonNull",
-        "java.util.Objects.requireNonNullElse",
-        "org.mockito.Mockito.*",
+	"org.hamcrest.MatcherAssert.assertThat",
+	"org.hamcrest.Matchers.*",
+	"org.hamcrest.CoreMatchers.*",
+	"org.junit.jupiter.api.Assertions.*",
+	"java.util.Objects.requireNonNull",
+	"java.util.Objects.requireNonNullElse",
+	"org.mockito.Mockito.*",
       },
       importOrder = {
-        "java",
-        "javax",
-        "com",
-        "org"
+	"java",
+	"javax",
+	"com",
+	"org"
       },
     },
     extendedClientCapabilities = jdtls.extendedClientCapabilities,
     sources = {
       organizeImports = {
-        starThreshold = 9999,
-        staticStarThreshold = 9999,
+	starThreshold = 9999,
+	staticStarThreshold = 9999,
       },
     },
     codeGeneration = {
       toString = {
-        template = "${object.className}{${member.name()}=${member.value}, ${otherMembers}}",
+	template = "${object.className}{${member.name()}=${member.value}, ${otherMembers}}",
       },
       useBlocks = true,
     },
@@ -179,4 +179,3 @@ vim.keymap.set("n", "<leader>tc", function() run_java_test_class() end)
 vim.keymap.set("n", "<leader>TC", function() run_java_test_class(true) end)
 vim.keymap.set("n", "<F9>", function() run_spring_boot() end)
 vim.keymap.set("n", "<F10>", function() run_spring_boot(true) end)
-
