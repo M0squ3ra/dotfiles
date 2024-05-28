@@ -1,4 +1,3 @@
-
 -- Make the changes take effect: :so
 
 -- VIM Cheatsheet
@@ -26,6 +25,6 @@
 -- `gc` - Toggles the region using linewise comment
 -- `gb` - Toggles the region using blockwise comment
 
-require('lazy-conf')
-require('options')
-require('keymaps')
+require("lazy-conf")
+require("options")
+require("keymaps")

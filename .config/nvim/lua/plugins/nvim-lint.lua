@@ -1,8 +1,8 @@
 return {
-	'mfussenegger/nvim-lint',			-- linter
+	"mfussenegger/nvim-lint", -- linter
 	event = { "BufReadPre", "BufNewFile" },
 	config = function()
-		local lint = require('lint')
+		local lint = require("lint")
 
 		lint.linter_by_ft = {
 			javascript = { "eslint_d" },
@@ -24,7 +24,7 @@ return {
 		})
 
 		vim.keymap.set("n", "<leader>ll", function()
-				lint.try_lint()
-			end, { desc = "Trigger linting for current file" })
+			lint.try_lint()
+		end, { desc = "Trigger linting for current file" })
 	end,
 }
