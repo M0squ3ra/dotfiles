@@ -17,6 +17,16 @@ return {
 					indentscope_color = "",
 				},
 				mason = true,
+				telescope = {
+					enabled = true,
+				},
+				fidget = true,
+				indent_blankline = {
+					enabled = true,
+					scope_color = "", -- catppuccin color (eg. `lavender`) Default: text
+					colored_indent_levels = false,
+				},
+				leap = true,
 				-- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
 			},
 		})
@@ -24,4 +34,3 @@ return {
 		vim.cmd.colorscheme("catppuccin")
 	end,
 }
-

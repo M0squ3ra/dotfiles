@@ -5,6 +5,8 @@ return {
 			formatters_by_ft = {
 				lua = { "stylua" },
 				java = { "google-java-format" },
+				yaml = { "yamlfmt" },
+				json = { "jq" },
 			},
 		})
 		vim.api.nvim_set_keymap(

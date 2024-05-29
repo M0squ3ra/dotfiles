@@ -6,6 +6,12 @@ return {
 	},
 	config = function()
 		require("telescope").load_extension("harpoon")
+		require("telescope").setup({
+			defaults = {},
+			extensions = {
+				theme = "catppuccin",
+			},
+		})
 
 		vim.keymap.set("n", "ff", ":Telescope find_files hidden=true<CR>", { noremap = true, silent = true })
 		vim.keymap.set("n", "fg", ":Telescope live_grep<CR>", { noremap = true, silent = true })
@@ -14,4 +20,3 @@ return {
 		vim.keymap.set("n", "<leader>ht", ":Telescope harpoon marks<CR>", { noremap = true })
 	end,
 }
-

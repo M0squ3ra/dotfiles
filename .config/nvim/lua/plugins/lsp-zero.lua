@@ -106,6 +106,8 @@ return {
 				"pylint",
 				"google-java-format",
 				"stylua",
+				"jq",
+				"yamlfmt",
 			},
 			auto_update = true,
 			run_on_start = true,
