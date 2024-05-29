@@ -15,7 +15,7 @@ vim.cmd([[
 	filetype on
 	filetype plugin on
 	filetype indent on
-
+	set conceallevel=1
 	" set foldmethod=expr
 	" set foldexpr=nvim_treesitter#foldexpr()
 	" autocmd BufReadPost,FileReadPost * normal zR
