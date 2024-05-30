@@ -1,1 +1,4 @@
 Nvidia and wayland: https://www.maketecheasier.com/wayland-work-with-nvidia-graphics-cards/
+
+VPN: conviene instalar solo networkmanager y listo
+problema de ruteo (dns funciona pero ruteo no): puede ser que varios servicios intenten escribir la tabla de ruteo al mismo tiempo (dhcp y network manager) y eso genera conflictos, deshabilitar uno
