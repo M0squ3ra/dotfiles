@@ -22,6 +22,7 @@ select opt in Basico Nvidia Extra Laptop DevOps Java Quit; do
 				nemo \
 				neofetch \
 				neovim \
+				network-manager network-manager-applet network-manager-openvpn openvpn \
 				nitrogen \
 				npt \
 				openssh \
