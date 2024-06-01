@@ -10,6 +10,7 @@ return {
 		"hrsh7th/cmp-nvim-lsp",
 		"hrsh7th/cmp-buffer",
 		"hrsh7th/cmp-path",
+		"SergioRibera/cmp-dotenv",
 		"L3MON4D3/LuaSnip",
 		"saadparwaiz1/cmp_luasnip",
 		"rafamadriz/friendly-snippets",
@@ -51,6 +52,7 @@ return {
 						luasnip = "⋗",
 						buffer = "Ω",
 						nvim_lua = "Π",
+						dotenv = "Σ"
 					}
 					if entry.source.name == "path" then
 						local is_directory = entry:get_completion_item().label:sub(-1) == "/"
@@ -73,6 +75,7 @@ return {
 				{ name = "luasnip" },
 				{ name = "nvim_lsp_signature_help" },
 				{ name = "path" },
+				{ name = "dotenv" },
 			},
 		})
 

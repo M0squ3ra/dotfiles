@@ -130,6 +130,6 @@ return {
 			widgets.centered_float(widgets.scopes)
 		end
 
-		vim.keymap.set("n", "gs", ":lua show_dap_centered_scopes()<CR>")
+		vim.keymap.set("n", "<leader>ds", ":lua show_dap_centered_scopes()<CR>")
 	end,
 }
