@@ -7,6 +7,9 @@ return {
 				java = { "google-java-format" },
 				yaml = { "yamlfmt" },
 				json = { "jq" },
+				c = { "clang-format" },
+				cpp = { "clang-format" },
+				arduino = { "clang-format" },
 			},
 		})
 		vim.api.nvim_set_keymap(

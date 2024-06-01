@@ -52,7 +52,7 @@ return {
 						luasnip = "⋗",
 						buffer = "Ω",
 						nvim_lua = "Π",
-						dotenv = "Σ"
+						dotenv = "Σ",
 					}
 					if entry.source.name == "path" then
 						local is_directory = entry:get_completion_item().label:sub(-1) == "/"
@@ -111,6 +111,7 @@ return {
 				"stylua",
 				"jq",
 				"yamlfmt",
+				"clang-format",
 			},
 			auto_update = true,
 			run_on_start = true,
