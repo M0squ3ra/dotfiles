@@ -4,13 +4,13 @@ return {
 		"catppuccin/nvim", -- theme
 	},
 	config = function()
-		local frappe = require("catppuccin.palettes").get_palette("frappe")
+		local palette = require("catppuccin.palettes").get_palette("frappe")
 		require("bufferline").setup({
 			highlights = require("catppuccin.groups.integrations.bufferline").get({
 				styles = { "italic", "bold" },
 				custom = {
 					frappe = {
-						background = { fg = frappe.text },
+						background = { fg = palette.text },
 					},
 				},
 			}),
