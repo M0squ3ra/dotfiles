@@ -115,7 +115,7 @@ return {
 			},
 			auto_update = true,
 			run_on_start = true,
-			debounce_hours = 24,
+			debounce_hours = 1,
 		})
 	end,
 }
