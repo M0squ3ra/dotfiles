@@ -27,6 +27,7 @@ return {
 					colored_indent_levels = false,
 				},
 				leap = true,
+				noice = false,
 				-- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
 			},
 		})
