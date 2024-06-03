@@ -1,5 +1,6 @@
 return {
 	"tzachar/local-highlight.nvim", -- hghlight uses of word under the cursor
+	event = { "BufReadPre", "BufNewFile" },
 	config = function()
 		require("local-highlight").setup({
 			hlgroup = "Search",
