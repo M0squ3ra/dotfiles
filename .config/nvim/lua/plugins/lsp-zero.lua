@@ -112,6 +112,8 @@ return {
 				"jq",
 				"yamlfmt",
 				"clang-format",
+				"sql-formatter",
+				"sqlfluff",
 			},
 			auto_update = true,
 			run_on_start = true,
