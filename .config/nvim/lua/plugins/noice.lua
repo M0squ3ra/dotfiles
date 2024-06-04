@@ -4,7 +4,7 @@ return -- lazy.nvim
 	event = "VeryLazy",
 	dependencies = {
 		"MunifTanjim/nui.nvim",
-		"rcarriga/nvim-notify",
+		{ "rcarriga/nvim-notify", enabled = false },
 		"nvim-treesitter/nvim-treesitter/",
 	},
 	config = function()
