@@ -7,7 +7,7 @@ fi
 
 PS3="Select option: "
 
-select opt in Basico Nvidia Extra Laptop DevOps Java Quit; do
+select opt in Basico Nvidia Extra Laptop DevOps Java Virt Quit; do
 	case $opt in
 		Basico)
 			echo "Basico"
@@ -90,6 +90,19 @@ select opt in Basico Nvidia Extra Laptop DevOps Java Quit; do
 			sudo pacman -S --noconfirm --needed \
 				jdk17-openjdk \
 				maven
+			;;
+		Virt)
+			echo "Virt"
+			sudo pacman -S --noconfirm --needed \
+				qemu \
+				virt-manager \
+				virt-viewer \
+				dnsmasq vde2 \
+				bridge-utils \
+				openbsd-netcat \
+				dmidecode \
+				ebtables \
+				iptables
 			;;
 		Quit)
 			break;;

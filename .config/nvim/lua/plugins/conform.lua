@@ -11,6 +11,7 @@ return {
 				cpp = { "clang-format" },
 				arduino = { "clang-format" },
 				sql = { "sql-formatter" },
+				css = { "prettier" },
 			},
 		})
 		vim.api.nvim_set_keymap(
