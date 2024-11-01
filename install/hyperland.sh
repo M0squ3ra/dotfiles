@@ -6,3 +6,5 @@ pacman -S egl-wayland #nvidia
 pacman -S hyprlock
 pacman -S hyprwayland-scanner
 pacman -S xdg-desktop-portal-hyprland
+pacman -S rofi-wayland
+yay -S hyprshot

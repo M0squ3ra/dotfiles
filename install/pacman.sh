@@ -34,7 +34,6 @@ select opt in Basico Nvidia Extra Laptop DevOps Java Virt Quit; do
 				pavucontrol-qt \
 				picom \
 				ripgrep \
-				rofi \
 				scrot \
 				unzip \
 				unrar \
